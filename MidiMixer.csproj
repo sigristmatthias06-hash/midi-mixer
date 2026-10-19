@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <Version>0.1.0-alpha</Version>
+    <Authors>Matthias Sigrist</Authors>
+    <Description>Windows audio and MIDI mixer for APC mini mk2. Experimental dual-bus audio routing.</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <RuntimeIdentifiers>win-x64</RuntimeIdentifiers>
+    <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
+    <DefaultItemExcludes>$(DefaultItemExcludes);artifacts/**;dist/**;dist-next/**;drivers/**</DefaultItemExcludes>
+    <DebugType>embedded</DebugType>
+    <PathMap>$(MSBuildProjectDirectory)=/_/MidiMixer</PathMap>
+  </PropertyGroup>
+  <ItemGroup><PackageReference Include="NAudio" Version="2.2.1" /></ItemGroup>
+  <ItemGroup>
+    <None Update="LICENSE;README.md;VIRTUAL_MIXER.md;CHANGELOG.md;THIRD-PARTY-NOTICES.md;licenses\**\*" CopyToPublishDirectory="PreserveNewest" />
+  </ItemGroup>
+</Project>
